@@ -34,7 +34,7 @@ fi
 if [ \( -n "$nver" \) -a \( "$nver" != "$ver" \) -o ! \( -f "$DIR/magiskinit" \) -o \( "$nver" = "canary" \) -o \( "$nver" = "alpha" \) ]
 then
 	echo "Updating Magisk from $ver to $nver"
-	curl -s --output "$DIR/magisk.zip" -L "$magisk_link"
+	#curl -s --output "$DIR/magisk.zip" -L "$magisk_link"
 	if fgrep 'Not Found' "$DIR/magisk.zip"; then
 		curl -s --output "$DIR/magisk.zip" -L "${magisk_link%.apk}.zip"
 	fi
