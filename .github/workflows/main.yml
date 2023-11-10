@@ -3,7 +3,7 @@ name: Build
 on: [push]
 
 env:
-  TOOLCHAIN: cruel
+  TOOLCHAIN: default
   INSTALLER: yes
 
 jobs:
@@ -55,9 +55,9 @@ jobs:
           set -e -o pipefail
           ./cruelbuild config                    \
                        model=${{ matrix.model }} \
-                       name="NightBloom"        \
+                       name="Soap"        \
                        toolchain=$TOOLCHAIN      \
-                       +magisk=delta                   \
+                       +magisk=canary                   \
                        os_patch_level=2023-04                   \
                        +nohardening              \
                        +performance                      \
